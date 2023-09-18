@@ -1,0 +1,51 @@
+@layer components {
+    .btn {
+        @apply text-white px-6 py-2 relative z-10 rounded-md overflow-hidden block;
+    }
+    .btn.btn-sm {
+        @apply text-sm px-4 py-1;
+    }
+    .btn:after {
+        content: "";
+        @apply absolute bottom-0 left-0 w-full h-full -z-20;
+    }
+    .btn:before {
+        content: "";
+        @apply absolute bottom-0 left-0 w-0 h-full -z-10 rounded-md transition-all duration-300 ease-out;
+    }
+    .btn:hover:before {
+        @apply w-full;
+    }
+    .btn.btn-primary {
+        @apply bg-blue-800;
+    }
+    .btn.btn-primary:before {
+        @apply bg-blue-600;
+    }
+    .btn.btn-secondary {
+        @apply bg-orange-400;
+    }
+    .btn.btn-secondary:before {
+        @apply bg-orange-600;
+    }
+    .btn.btn-danger {
+        @apply bg-red-400;
+    }
+    .btn.btn-danger:before {
+        @apply bg-red-600;
+    }
+    .btn.btn-success {
+        @apply bg-green-500;
+    }
+    .btn.btn-success:before {
+        @apply bg-green-600;
+    }
+}
+
+.sd-root-modern--mobile .sd-body__navigation .sd-btn {
+    background: #31c7a9;
+}
+
+.sd-dropdown__filter-string-input {
+    color: black;
+}
